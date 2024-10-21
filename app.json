@@ -12,16 +12,37 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs camera access",
+        "NSMicrophoneUsageDescription": "This app needs microphone access",
+        "NSLocationWhenInUseUsageDescription": "This app needs location access"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.design2.MyWebViewApp",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "INTERNET"
+      ],
+      "webView": {
+        "cameraPermission": true,
+        "microphonePermission": true
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6aef86a2-3735-4ace-bb3c-cd103412be5f"
+      }
     }
   }
 }
